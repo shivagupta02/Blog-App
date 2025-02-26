@@ -36,12 +36,14 @@ public ResponseEntity<CategoryDto> createCategory(@Valid @RequestBody CategoryDt
 	return new ResponseEntity<>(createCat, HttpStatus.OK);
 }
 
-@PutMapping("/{categoryId}")
- public ResponseEntity<CategoryDto> updateCategory(@Valid @RequestBody CategoryDto categoryDto, @PathVariable("categoryId") Integer cid )
- {
-	 CategoryDto updatedCategory = this.categoryService.updateCategory(categoryDto, cid);
-	 return  ResponseEntity.ok(updatedCategory);
- }
+//@PutMapping("/{categoryId}")
+// public ResponseEntity<CategoryDto> updateCategory(@Valid @RequestBody CategoryDto categoryDto, @PathVariable("categoryId") Integer cid )
+// {
+//	 CategoryDto updatedCategory = this.categoryService.updateCategory(categoryDto, cid);
+//	 return  ResponseEntity.ok(updatedCategory);
+// }
+
+
 
 @GetMapping("/{categoryId}")
 public ResponseEntity<CategoryDto> getCategoryById(@PathVariable("categoryId") Integer cid)
